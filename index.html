@@ -1,162 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Space Gallery: Astronauts and Beyond</title>
+    <title>My Portfolio</title>
     <style>
-        /* General page styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #0a0b2c, #1c1e4f); /* Space-themed gradient */
-            background-size: cover;
-            background-attachment: fixed;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: rgb(174, 0, 255);
             color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             text-align: center;
-            overflow: hidden;
+            padding: 20px 0;
         }
 
-        /* Gallery container with a centered grid */
-        .gallery-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
-            justify-items: center;
+        section {
             padding: 20px;
-            margin: 0 auto;
-            max-width: 100%;
-            background: rgba(0, 0, 0, 0.6); /* Dark overlay behind images for better visibility */
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-            overflow-y: auto; /* Allow scrolling if content overflows */
-            max-height: 80vh; /* Limit the height of the gallery to fit within the screen */
-            box-sizing: border-box;
+            margin: 10px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
-        /* Individual image styles */
-        .gallery-container .image-container {
-            position: relative;
-            width: 100%;
-            height: 250px; /* Fixed height for each image */
-            border: 3px solid #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-            cursor: pointer;
+        h2 {
+            color: #333;
         }
 
-        /* Positioning text on top of images */
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
+        .projects {
+            display: flex;
+            justify-content: space-around;
         }
 
-        .image-container .text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .project {
+            width: 45%;
+            padding: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(95, 1, 114, 0.1);
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: rgb(4, 190, 241);
             color: white;
-            font-size: 20px;
-            font-weight: bold;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
-
-        /* Hover effects */
-        .gallery-container .image-container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Cyan glow effect for hover */
-            border: 3px solid #00ffff; /* Cyan border for hover effect */
-        }
-
-        /* Gallery title */
         h1 {
-            font-size: 3em;
-            color: #00ffcc;
-            letter-spacing: 5px;
-            margin-top: 50px;
-            text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Subtitle (optional) */
-        p {
-            font-size: 1.2em;
-            color: #d1d1d1;
-            margin-top: 10px;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Adjust grid layout to have 2 images underneath each other */
-        @media (max-width: 1000px) {
-            .gallery-container {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjust column size on smaller screens */
-                gap: 15px; /* Smaller gap between items */
-            }
-        }
-
-        @media (max-width: 600px) {
-            .gallery-container {
-                grid-template-columns: 1fr; /* Stack images vertically on mobile devices */
-                gap: 10px; /* Reduce gap on smaller devices */
-            }
-            h1 {
-                font-size: 2em; /* Smaller title on small screens */
-            }
-            p {
-                font-size: 1em; /* Smaller subtitle on small screens */
-            }
+          color: black;
         }
     </style>
 </head>
 <body>
 
-    <div>
-        <h1>Space Gallery: Astronauts and Beyond</h1>
-        <p>Explore the infinite universe and the brave astronauts who venture into the unknown.</p>
-    </div>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
 
-    <div class="gallery-container">
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/images (8).jpg" alt="Astronaut 1">
-            <div class="text-overlay">Space Mission</div>
+    <section id="about" style="background-color: powderblue; font-family: Arial, Helvetica, sans-serif;">
+        <h2>About Me</h2>
+        <p>Hello, I'm Shreyash Suryawanshi. I'm a passionate developer with a focus on web development. I enjoy creating user-friendly websites and learning new technologies.</p>
+    </section>
+
+    <section id="projects" style="background-color: powderblue;">
+        <h2>My Projects</h2>
+        <div class="projects">
+            <div class="project" style="background-color: aqua; border: outset; " >
+                <h3>Project 1</h3>
+                <p>A responsive personal website built with HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="project" style="background-color: aqua; border: outset;">
+                <h3>Project 2</h3>
+                <p>A simple to-do list app created using JavaScript for task management.</p>
+            </div>
         </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/images (9).jpg" alt="Astronaut 2">
-            <div class="text-overlay">Exploring the Unknown</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/download (12).jpg" alt="Astronaut 3">
-            <div class="text-overlay">Space Walk</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/download (13).jpg" alt="Space Image 1">
-            <div class="text-overlay">The Galaxy</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/images (5).jpg" alt="Space Image 2">
-            <div class="text-overlay">Nebula Wonders</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/images (6).jpg" alt="Space Image 3">
-            <div class="text-overlay">Cosmic Beauty</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/download (14).jpg" alt="Space Image 4">
-            <div class="text-overlay">Astronaut in Orbit</div>
-        </div>
-        <div class="image-container">
-            <img src="C:/Users/DELL/Pictures/Saved Pictures/images (7).jpg" alt="Space Image 5">
-            <div class="text-overlay">Exploring the Stars</div>
-        </div>
-    </div>
+    </section>
+
+    <section id="contact" style="background-color: paleturquoise;">
+        <h2>Contact Me</h2>
+        <p>You can reach me at: <a href="mailto:shrey123@gmail.com">Shrey123@gmail.com</a></p>
+    </section>
+
+    <footer>
+        <p style="color: black; font-weight: bolder;">&copy; <b>2025 SHREYASH SURYAWANSHI. All rights reserved</b>.</p>
+    </footer>
 
 </body>
 </html>
